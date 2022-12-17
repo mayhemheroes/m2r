@@ -4,7 +4,7 @@ import atheris
 import sys
 import fuzz_helpers
 
-with atheris.instrument_imports():
+with atheris.instrument_imports(include=["m2r"]):
     from m2r import convert, parse_from_file
 
 def TestOneInput(data):
